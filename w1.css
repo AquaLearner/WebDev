@@ -1,0 +1,104 @@
+#heading {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.ab {
+    display: flex;
+    justify-content: space-around;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+
+.block {
+    position: relative;
+    flex: 1;
+    margin: 15px;
+    border: 2px solid black;
+    background-color: gray;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.small-box {
+    flex: 1;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 120px;
+    text-align: center;
+    padding-top: 2px;
+    height: 30px;
+    border: 2px solid black;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+#small-box1{
+    background-color: rgb(226, 175, 183);
+}
+#small-box2{
+    background-color: rgb(226, 17, 17);
+    color:white;
+    
+}
+#small-box3{
+    background-color: rgb(207, 207, 178);
+}
+
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .ab {
+        flex-direction: row;
+    }
+
+    .block {
+        width: 30%; /* Each section takes up 30% of the screen */
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .ab {
+        flex-direction: row;
+        align-items: flex-start; /* Align items at the start of the cross-axis */
+        justify-content:space-around;
+    }
+
+    .block {
+        width: 48%; /* Each section takes up 48% of the screen */
+    }
+
+    #small-box3 {
+        width: 100%; /* Third section takes up the entire row */
+        clear: both; /* Move it to a new row */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .ab {
+        flex-direction: column;
+        justify-content: center; /* Center items in the main axis */
+        align-items: center; /* Center items in the cross-axis */
+    }
+
+    .block {
+        width: 100%; /* Each section takes up 100% of the screen */
+    }
+}
+
